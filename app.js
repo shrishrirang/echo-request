@@ -12,12 +12,12 @@ app.get('/', function (req, res) {
 })
 
 app.post('/call/postwithoutbody/:id', function (req, res) {
-    var headers = JSON.stringify(req.headers);
+    var headers = JSON.stringify(req.headers) + '\n';
 
     console.log(headers)
     
     try {
-        fs.appendFileSync('d:\\home\\out.txt', headers + '\n');
+        fs.appendFileSync('d:\\home\\out.txt', headers);
     } catch(err) {
         // An error occurred
         console.error(err);
