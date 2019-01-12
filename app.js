@@ -17,7 +17,7 @@ app.post('/call/postwithoutbody/:id', function (req, res) {
     console.log(headers)
     
     try {
-        fs.appendFileSync('d:\\home\\out.txt', headers + '\n', { mode: 0o755 });
+        fs.appendFileSync('d:\\home\\out.txt', headers + '\n');
     } catch(err) {
         // An error occurred
         console.error(err);
